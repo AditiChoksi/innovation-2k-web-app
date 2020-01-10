@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  receipt_no: 1
+  name: MyString
+  college: MyString
+  contact_no: 1
+  team: MyText
+  year: MyString
+  dept: MyString
+  amt_paid: 1
+  event_name: MyString
+  volunteer_id: 1
+
+two:
+  receipt_no: 1
+  name: MyString
+  college: MyString
+  contact_no: 1
+  team: MyText
+  year: MyString
+  dept: MyString
+  amt_paid: 1
+  event_name: MyString
+  volunteer_id: 1

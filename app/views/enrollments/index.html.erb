@@ -1,0 +1,47 @@
+<h1>Listing enrollments</h1> &nbsp;
+<%= link_to 'New Registration', new_enrollment_path, :target => "_blank" %>
+
+<p id="notice"><%= notice %></p>
+
+<table border="0" style="margin-left: 8px; margin-top: 10px" cellpadding="7px" >
+  <thead style="font-size: 14px">
+    <tr>
+      <th>Rcpt no</th>
+      <th>Name</th>
+      <th>College</th>
+      <!-- <th>Contact no</th> -->
+      <!-- <th>Email</th> -->
+      <th>Team</th>
+      <th>Year</th>
+      <th>Dept</th>
+      <!-- <th>Amt paid</th> -->
+      <th>Event name</th>
+      <!-- <th>Vol <br /> Id</th> -->
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+
+  <tbody style="text-align: center">
+    <% @enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.receipt_no %></td>
+        <td style="width: 40px"><%= enrollment.name %></td>
+        <td style="width: 45px"><%= enrollment.college %></td>
+        <!-- <td><%= enrollment.contact_no %></td> -->
+        <!-- <td><%= enrollment.email %></td> -->
+        <td style="width: 40px"><%= enrollment.team %></td>
+        <td><%= enrollment.year %></td>
+        <td><%= enrollment.dept %></td>
+        <!-- <td><%= enrollment.amt_paid %></td> -->
+        <td><%= enrollment.event_name %></td>
+        <!-- <td><%= enrollment.volunteer_id %></td> -->
+        
+        <!-- <td><%= link_to 'Show', enrollment %></td> -->
+        <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+        <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br />

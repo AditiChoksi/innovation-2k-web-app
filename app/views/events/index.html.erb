@@ -1,0 +1,41 @@
+<h1>Listing events</h1>
+
+<table style="margin-left: 12px; margin-top: 10px" cellpadding="8px">
+  <thead style="font-size: 14px">
+    <tr>
+      <th>Event name</th>
+      <th>Reg. Fees</th>
+      <th>Dept</th>
+      <th>Coordinator</th>
+      <th>Contact</th>
+      <th>Co-Coordinator</th>
+      <th>Co-Contact</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody style="text-align: center">
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.event_name %></td>
+        <td><%= event.reg_fees %></td>
+        <td><%= event.dept %></td>
+        <td><%= event.coordinator %></td>
+        <td><%= event.contact %></td>
+        <td><%= event.co_coordinator %></td>
+        <td><%= event.co_contact %></td>
+        <!-- <td><%= link_to 'Show', event %></td> -->
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br />
+
+<%= link_to 'New Event', new_event_path %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
+<%= link_to 'View Enrollments', enrollments_path %>

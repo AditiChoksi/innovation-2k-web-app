@@ -1,0 +1,123 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #800000;
+    background-color: #ffffff;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+#header {  
+    background-color:#CCCCFF;
+    color:#4B0082;
+    padding:10px;
+    font-family: monospace;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#CCCCFF;
+    width:175px;
+    float:left;
+    padding:5px; 
+    color:black;       
+}
+
+#section {
+    float:left;
+    padding: 15px;
+}
+
+.evtBtn {
+  border-radius: 20px;
+  height: 38px;
+  width: 150px;
+  background-color: #780360;
+  color: white;
+  white-space: normal;
+}
+
+.evtBtn:hover {
+  background: #46000D;
+}
+
+.rcpt_field {
+  width: 120px;
+  height: 20px;
+}
+
+.checkoutbutton {
+  width: 67px;
+  height: 40px;
+  background-color: #33FF00;
+  moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border: 5px solid #009900;
+  padding: 5px;
+}
+
+table
+{
+    table-layout: fixed;
+}

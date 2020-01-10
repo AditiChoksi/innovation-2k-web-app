@@ -1,0 +1,54 @@
+
+
+<p>
+  <strong>Receipt no:</strong>
+  <%= @enrollment.receipt_no %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @enrollment.name %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @enrollment.college %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= @enrollment.contact_no %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @enrollment.team %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @enrollment.year %>
+</p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @enrollment.dept %>
+</p>
+
+<p>
+  <strong>Amt paid:</strong>
+  <%= @enrollment.amt_paid %>
+</p>
+
+<p>
+  <strong>Event name:</strong>
+  <%= @enrollment.event_name %>
+</p>
+
+<p>
+  <strong>Volunteer:</strong>
+  <%= @enrollment.volunteer_id %>
+</p>
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>

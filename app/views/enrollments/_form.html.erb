@@ -1,0 +1,76 @@
+<%= form_for(@enrollment) do |f| %>
+<% if @enrollment.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+
+	<ul>
+		<% @enrollment.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<div class="field">
+	<%= f.label :receipt_no %>&nbsp;&nbsp;
+	<%= f.text_field :receipt_no, :class=>"rcpt_field", autofocus: true %>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<%= f.label :name %>&nbsp;&nbsp;
+	<%= f.text_field :name, :class=>"rcpt_field" %>
+
+	&nbsp;&nbsp;&nbsp;
+
+	<%= f.label :college %>&nbsp;&nbsp;
+	<%= f.text_field :college, :class=>"rcpt_field" %>
+</div>
+<br />
+
+<div class="field">
+	<%= f.label :contact_no %>&nbsp;&nbsp;
+	<%= f.text_field :contact_no, :class=>"rcpt_field" %>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<%= f.label :year %>&nbsp;&nbsp;
+	<%= f.select :year, Enrollment::YEAR, {}, :class=>"form-control" %>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<%= f.label :department %>&nbsp;
+	<%= f.text_field :dept, :class=>"rcpt_field" %>
+</div>
+<br />
+
+<div class="field">
+	<%= f.label :email %>&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<%= f.text_field :email, :class=>"rcpt_field" %>
+</div>
+
+<div class="field">
+	<%= f.label :team %>
+	<br>
+	<%= f.text_area :team, :cols => "70", :rows => "5" %>
+</div>
+<br />
+
+<div class="field">
+	<%= f.label :amt_paid %>&nbsp;&nbsp;
+	<%= f.number_field :amt_paid, :class=>"rcpt_field" %>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<%= f.label :event_name %>&nbsp;&nbsp;
+	<%= f.text_field :event_name, :class=>"rcpt_field" %>
+
+</div>
+<br />
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

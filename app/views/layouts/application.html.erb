@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Innovation2k15</title>
+
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+
+	</head>
+	<body>
+
+		<div id="header">
+			<center>
+			<table>
+				<tr>
+					<td> <%= image_tag "spacer3.gif", :size => "350x10" %> </td>
+					<td><h1 style="font-family: monospace; font-size: 30px; color: Indigo" align="center"> Innovation&nbsp;2k15</h1></td>
+					<td> <%= image_tag "spacer3.gif", :size => "300x10" %> </td>
+					<td>
+					<ul class="nav navbar-nav pull-right" style="text-align: right">
+						<% if user_signed_in? %>
+						<li style="font-size: 14px">
+							<a href="/my_enrollments"> <%= "#{current_user.email}" %> </a>
+						</li>
+						<li class="active" style="font-size: 14px">
+							<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+						</li>
+						<% end %>
+					</ul>
+					</td>
+				</tr>
+			</table>
+			</center>
+		</div>
+
+		<div id="nav">
+			<font>
+				<div>
+					<p style="font-size: 18px">
+						<b>Comp</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "Comp" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>IT</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "IT" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>EnTC</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "EnTC" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>Mech</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "Mech" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>Instru</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "Instru" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>Workshops</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "Workshop" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+				<div>
+					<p style="font-size: 18px">
+						<b>Common</b>
+					</p>
+					<% @events.each do |event| %>
+					<% if event.dept == "Common" %>
+					<button class="evtBtn" value=<%= event.id %> >
+						<%= event.event_name %>
+					</button>
+					<% end %>
+					<% end %>
+				</div>
+		</div>
+		</font>
+		</div>
+
+		<div id="section">
+			<%= yield %>
+		</div>
+
+	</body>
+</html>
